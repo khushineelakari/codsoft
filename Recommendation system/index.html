@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation System</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <!-- Dark Mode Button -->
+    <button id="themeBtn">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <h1>
+        <i class="fa-solid fa-star"></i>
+        Recommendation System
+    </h1>
+
+    <p class="subtitle">
+        Get personalized recommendations instantly.
+    </p>
+
+    <!-- Category -->
+    <div class="input-box">
+        <label>
+            <i class="fa-solid fa-layer-group"></i>
+            Category
+        </label>
+
+        <select id="category">
+            <option value="">Select Category</option>
+            <option value="movies">🎬 Movies</option>
+            <option value="books">📚 Books</option>
+            <option value="music">🎵 Music</option>
+        </select>
+    </div>
+
+    <!-- Preference -->
+    <div class="input-box">
+        <label>
+            <i class="fa-solid fa-heart"></i>
+            Preference
+        </label>
+
+        <select id="preference">
+            <option value="">Select Preference</option>
+        </select>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+
+        <button id="recommendBtn" onclick="recommend()">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Recommend
+        </button>
+
+        <button id="resetBtn" onclick="resetForm()">
+            <i class="fa-solid fa-rotate-left"></i>
+            Reset
+        </button>
+
+    </div>
+
+    <!-- Loading -->
+    <div id="loading">
+        <div class="loader"></div>
+        <p>Finding Best Recommendation...</p>
+    </div>
+
+    <!-- Result -->
+    <div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

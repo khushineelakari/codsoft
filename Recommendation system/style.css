@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:linear-gradient(-45deg,#6a11cb,#2575fc,#00c6ff,#7b2ff7);
+    background-size:400% 400%;
+    animation:gradientBG 10s ease infinite;
+    overflow:hidden;
+}
+
+/* Animated Background */
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:430px;
+    padding:35px;
+    border-radius:20px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.3);
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+    animation:fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:10px;
+    font-size:28px;
+}
+
+.subtitle{
+    text-align:center;
+    color:white;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+.input-box{
+    margin-bottom:18px;
+}
+
+.input-box label{
+    color:white;
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+select:hover{
+    transform:scale(1.02);
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    margin-top:15px;
+}
+
+button{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+#recommendBtn{
+    background:#00e676;
+    color:white;
+}
+
+#recommendBtn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,230,118,.4);
+}
+
+#resetBtn{
+    background:#ff5252;
+    color:white;
+}
+
+#resetBtn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(255,82,82,.4);
+}
+
+/* Dark Mode Button */
+
+#themeBtn{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:white;
+    color:#333;
+}
+
+/* Loading */
+
+#loading{
+    display:none;
+    text-align:center;
+    margin-top:20px;
+    color:white;
+}
+
+.loader{
+    width:45px;
+    height:45px;
+    margin:auto;
+    border:5px solid rgba(255,255,255,.3);
+    border-top:5px solid white;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* Result Card */
+
+#result{
+    display:none;
+    margin-top:25px;
+    padding:20px;
+    border-radius:15px;
+    background:rgba(255,255,255,.25);
+    color:white;
+    animation:fadeResult .6s;
+}
+
+@keyframes fadeResult{
+    from{
+        opacity:0;
+        transform:scale(.9);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+#result h3{
+    margin-bottom:12px;
+}
+
+#result ul{
+    list-style:none;
+}
+
+#result li{
+    padding:8px 0;
+    border-bottom:1px solid rgba(255,255,255,.2);
+}
+
+/* Responsive */
+
+@media(max-width:500px){
+
+.container{
+    width:92%;
+    padding:25px;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+}
