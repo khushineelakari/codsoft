@@ -22,6 +22,12 @@ This repository contains the projects I completed during my CodSoft Internship.
 - JavaScript
 - Git
 - GitHub
+ 
+ ## Demo Videos
+ The project demo videos are available in the demo-videos folder.
+ -Chatbot Demo
+ -Recommendation System Demo
+ -Tic-Tac-Toe Demo 
 
 ## Author
 
